@@ -45,4 +45,7 @@ public class Persona {
     public void setCedula(int Cedula) {
         this.Cedula = Cedula;
     }
+    public static void main(String[] args) {
+    System.out.println("Prueba");
+    }
 }
