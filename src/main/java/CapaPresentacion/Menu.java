@@ -89,7 +89,11 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresoActionPerformed
-        // TODO add your handling code here:
+    dispose(); // Cerrar ventana
+    setVisible(false); // No se vé la ventana
+    Login lo=new Login(); //Variable que acciona para ir a la otra ventana
+    lo.setVisible(true);  
+    // TODO add your handling code here:
     }//GEN-LAST:event_btnIngresoActionPerformed
 
     /**
