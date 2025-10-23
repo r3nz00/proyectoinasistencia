@@ -45,10 +45,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        fieldContrasena.setText("jPasswordField1");
-
-        fieldCedula.setText("jTextField1");
-
         jLabel2.setText("Cedula");
 
         jLabel3.setText("Contraseña");
