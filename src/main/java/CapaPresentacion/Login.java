@@ -106,6 +106,10 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        dispose(); // Cerrar ventana
+        setVisible(false); // No se vé la ventana
+        Menu me=new Menu(); //Variable que acciona para ir a la otra ventana
+        me.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAtrasActionPerformed
 
