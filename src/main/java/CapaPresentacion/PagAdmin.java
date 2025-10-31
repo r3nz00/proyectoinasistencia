@@ -4,6 +4,8 @@
  */
 package CapaPresentacion;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author renzo
@@ -28,7 +30,6 @@ public class PagAdmin extends javax.swing.JFrame {
 
         btnAnadir = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableInasistencias = new javax.swing.JTable();
@@ -41,9 +42,9 @@ public class PagAdmin extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         fieldGrupo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        fieldMateria1 = new javax.swing.JTextField();
+        fieldInicio = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        fieldMateria2 = new javax.swing.JTextField();
+        fieldFinal = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,13 +57,6 @@ public class PagAdmin extends javax.swing.JFrame {
         });
 
         btnBorrar.setText("Borrar");
-
-        btnEditar.setText("Editar");
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("Registro de Inasistencias");
 
@@ -94,12 +88,6 @@ public class PagAdmin extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre");
 
-        fieldApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldApellidoActionPerformed(evt);
-            }
-        });
-
         jLabel3.setText("Apellido");
 
         fieldMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -118,19 +106,7 @@ public class PagAdmin extends javax.swing.JFrame {
 
         jLabel5.setText("Grupo");
 
-        fieldMateria1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldMateria1ActionPerformed(evt);
-            }
-        });
-
         jLabel6.setText("Inicio");
-
-        fieldMateria2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldMateria2ActionPerformed(evt);
-            }
-        });
 
         jLabel7.setText("Final");
 
@@ -146,10 +122,7 @@ public class PagAdmin extends javax.swing.JFrame {
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnAtras)
-                                        .addGap(52, 52, 52)
-                                        .addComponent(btnAnadir))
+                                    .addComponent(btnAtras)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(14, 14, 14)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,26 +139,28 @@ public class PagAdmin extends javax.swing.JFrame {
                                                 .addGap(12, 12, 12)
                                                 .addComponent(jLabel6)
                                                 .addGap(19, 19, 19)
-                                                .addComponent(fieldMateria1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(fieldInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(btnBorrar)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnEditar))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel5)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(fieldGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel3)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(fieldApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel7)
-                                            .addGap(19, 19, 19)
-                                            .addComponent(fieldMateria2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(jLabel5)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(fieldGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(fieldApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel7)
+                                                .addGap(19, 19, 19))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnAnadir)
+                                                .addGap(18, 18, 18)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(fieldFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnBorrar)))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(133, 133, 133)
                         .addComponent(jLabel1)))
@@ -211,16 +186,15 @@ public class PagAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(fieldMateria2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel7))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(fieldMateria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel6)))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAnadir)
                     .addComponent(btnBorrar)
-                    .addComponent(btnEditar)
                     .addComponent(btnAtras))
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -231,12 +205,8 @@ public class PagAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAnadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAnadirActionPerformed
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarActionPerformed
+    }//GEN-LAST:event_btnAnadirActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
     dispose(); // Cerrar ventana.
@@ -246,29 +216,17 @@ public class PagAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAtrasActionPerformed
 
-    private void fieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldNombreActionPerformed
-
-    private void fieldApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellidoActionPerformed
-
-    private void fieldMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMateriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldMateriaActionPerformed
-
     private void fieldGrupoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldGrupoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldGrupoActionPerformed
 
-    private void fieldMateria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMateria1ActionPerformed
+    private void fieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldMateria1ActionPerformed
+    }//GEN-LAST:event_fieldNombreActionPerformed
 
-    private void fieldMateria2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMateria2ActionPerformed
+    private void fieldMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldMateriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldMateria2ActionPerformed
+    }//GEN-LAST:event_fieldMateriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -309,12 +267,11 @@ public class PagAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btnAnadir;
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnBorrar;
-    private javax.swing.JButton btnEditar;
     private javax.swing.JTextField fieldApellido;
+    private javax.swing.JTextField fieldFinal;
     private javax.swing.JTextField fieldGrupo;
+    private javax.swing.JTextField fieldInicio;
     private javax.swing.JTextField fieldMateria;
-    private javax.swing.JTextField fieldMateria1;
-    private javax.swing.JTextField fieldMateria2;
     private javax.swing.JTextField fieldNombre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

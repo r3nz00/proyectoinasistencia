@@ -11,8 +11,7 @@ package CapaLogica;
 public class Persona {
     private String Nombre;
     private String Apellido;
-    private String NombreCompleto;
-    private int Cedula;
+    private String Cedula;
 
     public String getNombre() {
         return Nombre;
@@ -22,11 +21,7 @@ public class Persona {
         return Apellido;
     }
 
-    public String getNombreCompleto() {
-        return NombreCompleto;
-    }
-
-    public int getCedula() {
+    public String getCedula() {
         return Cedula;
     }
 
@@ -38,11 +33,7 @@ public class Persona {
         this.Apellido = Apellido;
     }
 
-    public void setNombreCompleto(String NombreCompleto) {
-        this.NombreCompleto = NombreCompleto;
-    }
-
-    public void setCedula(int Cedula) {
+    public void setCedula(String Cedula) {
         this.Cedula = Cedula;
     }
     public static void main(String[] args) {

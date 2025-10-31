@@ -8,7 +8,7 @@ package CapaLogica;
  *
  * @author renzo
  */
-public class Administracion {
+public class Docente {
     private String Cedula;
 
     public String getCedula() {
@@ -17,14 +17,5 @@ public class Administracion {
 
     public void setCedula(String Cedula) {
         this.Cedula = Cedula;
-    }
-    private String Contrasena;
-
-    public String getContrasena() {
-        return Contrasena;
-    }
-
-    public void setContrasena(String Contrasena) {
-        this.Contrasena = Contrasena;
     }
 }

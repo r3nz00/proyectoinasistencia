@@ -8,17 +8,9 @@ package CapaLogica;
  *
  * @author renzo
  */
-public class Grupo {
-    private String Turno;
+public class Corresponde {
     private int IDGrupo;
-
-    public String getTurno() {
-        return Turno;
-    }
-
-    public void setTurno(String Turno) {
-        this.Turno = Turno;
-    }
+    private String Cedula;
 
     public int getIDGrupo() {
         return IDGrupo;
@@ -26,5 +18,13 @@ public class Grupo {
 
     public void setIDGrupo(int IDGrupo) {
         this.IDGrupo = IDGrupo;
+    }
+
+    public String getCedula() {
+        return Cedula;
+    }
+
+    public void setCedula(String Cedula) {
+        this.Cedula = Cedula;
     }
 }

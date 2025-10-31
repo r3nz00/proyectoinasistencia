@@ -8,8 +8,15 @@ package CapaLogica;
  *
  * @author renzo
  */
-public class Administracion {
-    private String Cedula;
+public class Materias {
+
+    public int getIDGrupo() {
+        return IDGrupo;
+    }
+
+    public void setIDGrupo(int IDGrupo) {
+        this.IDGrupo = IDGrupo;
+    }
 
     public String getCedula() {
         return Cedula;
@@ -18,13 +25,15 @@ public class Administracion {
     public void setCedula(String Cedula) {
         this.Cedula = Cedula;
     }
-    private String Contrasena;
 
-    public String getContrasena() {
-        return Contrasena;
+    public String getMateria() {
+        return Materia;
     }
 
-    public void setContrasena(String Contrasena) {
-        this.Contrasena = Contrasena;
+    public void setMateria(String Materia) {
+        this.Materia = Materia;
     }
+    private int IDGrupo;
+    private String Cedula;
+    private String Materia;
 }
