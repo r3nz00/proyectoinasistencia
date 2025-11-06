@@ -23,5 +23,13 @@ GitHub: Para guardar el código, controlar versiones y mantener la documentació
 El proyecto utiliza los siguientes lenguajes y tecnologías:
 Java: Para desarrollar toda la aplicación, incluyendo la lógica del sistema (backend) y la interfaz de usuario (frontend).
 
-SQL (MySQL): Para gestionar la base de datos donde se almacenan las inasistencias y otra información del sistema
+SQL (MySQL): Para gestionar la base de datos donde se almacenan las inasistencias y otra información del sistema.
 
+Para utilizar este programa se utilizaron los siguentes requisitos:
+Procesador: Intel Celeron N4500
+Ram: 8GB
+Resolucion de pantalla: 1366x768
+Disco: eMMC de 128gb
+Sistema Operativo: Linux Mint 22.1 con entorno Cinnamon
+
+Recomendamos tener los mismos requisitos o superiores para el uso correcto de la aplicación.
