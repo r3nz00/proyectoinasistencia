@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-11-2025 a las 22:24:18
+-- Tiempo de generación: 07-11-2025 a las 01:26:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -32,6 +32,14 @@ CREATE TABLE `ADMINISTRACION` (
   `Contrasena` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `ADMINISTRACION`
+--
+
+INSERT INTO `ADMINISTRACION` (`Cedula`, `Contrasena`) VALUES
+('1234567', '1234'),
+('123456789', '1234');
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +51,13 @@ CREATE TABLE `CORRESPONDE` (
   `Cedula` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `CORRESPONDE`
+--
+
+INSERT INTO `CORRESPONDE` (`IDGrupo`, `Cedula`) VALUES
+(1, '123456789');
+
 -- --------------------------------------------------------
 
 --
@@ -52,6 +67,14 @@ CREATE TABLE `CORRESPONDE` (
 CREATE TABLE `DOCENTE` (
   `Cedula` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `DOCENTE`
+--
+
+INSERT INTO `DOCENTE` (`Cedula`) VALUES
+('12345678'),
+('123456789');
 
 -- --------------------------------------------------------
 
@@ -63,6 +86,13 @@ CREATE TABLE `GRUPO` (
   `IDGrupo` int(11) NOT NULL,
   `Turno` enum('matutino','vespertino','nocturno') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `GRUPO`
+--
+
+INSERT INTO `GRUPO` (`IDGrupo`, `Turno`) VALUES
+(1, NULL);
 
 -- --------------------------------------------------------
 
@@ -92,6 +122,15 @@ CREATE TABLE `LICENCIA` (
   `FFinal` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `LICENCIA`
+--
+
+INSERT INTO `LICENCIA` (`ID`, `Cedula`, `FInicio`, `FFinal`) VALUES
+(101, '123456789', '2025-10-11', '2025-10-12'),
+(102, '123456789', '2025-10-11', '2025-10-12'),
+(103, '12345678', '2025-10-11', '2025-10-12');
+
 -- --------------------------------------------------------
 
 --
@@ -103,6 +142,13 @@ CREATE TABLE `MATERIAS` (
   `Cedula` varchar(20) NOT NULL,
   `Materia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `MATERIAS`
+--
+
+INSERT INTO `MATERIAS` (`IDGrupo`, `Cedula`, `Materia`) VALUES
+(1, '123456789', 'Matemáticas');
 
 -- --------------------------------------------------------
 
@@ -137,6 +183,15 @@ CREATE TABLE `PERSONA` (
   `Nombre` varchar(50) DEFAULT NULL,
   `Apellido` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `PERSONA`
+--
+
+INSERT INTO `PERSONA` (`Cedula`, `Nombre`, `Apellido`) VALUES
+('1234567', 'Pruebanombre', 'Pruebaapellido'),
+('12345678', 'PruebaNombre2', 'PruebaApellido2'),
+('123456789', 'Nombreprueba', 'Apellidoprueba');
 
 -- --------------------------------------------------------
 
